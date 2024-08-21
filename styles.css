@@ -3,6 +3,10 @@
     color: white;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: black;
 }
@@ -21,7 +25,7 @@ nav{
 }
 
 hr{
-    background-color: white;
+    background-color: red;
     height: 5px;
     border: 0;
 }
@@ -100,6 +104,7 @@ nav ul li a:hover{
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
     margin: 20px;
+    color: red;
     letter-spacing: 2px;
 }
 
@@ -132,6 +137,7 @@ nav ul li a:hover{
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
     margin: 20px;
+    color: red;
     letter-spacing: 2px;
 }
 
@@ -192,12 +198,17 @@ nav ul li a:hover{
     padding: 0px 10px 15px 10px;
 }
 
+#products{
+    height: 500px;
+}
+
 .products-head h1{
     text-decoration: underline;
     text-align: center;
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
     margin: 20px;
+    color: red;
     letter-spacing: 2px;
 }
 
@@ -206,4 +217,29 @@ nav ul li a:hover{
     font-weight: 300;
     letter-spacing: 2px;
     text-align: center;
+}
+
+#contacts{
+    height: 500px;
+}
+
+.contacts-head h1{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    color: red;
+    letter-spacing: 2px;
+}
+
+.contacts-head p{
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+footer{
+    background-color: red;
 }
