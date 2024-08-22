@@ -221,7 +221,7 @@ nav ul li a:hover{
 
 #contacts{
     box-sizing: border-box;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -262,6 +262,9 @@ nav ul li a:hover{
     height: 50px;
     margin: 5px 0px;
     border-radius: 10px;
+    color: #2d2d2d;
+    padding-left: 15px;
+    font-size: 17px;
 }
 
 #contacts form textarea{
