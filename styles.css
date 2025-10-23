@@ -22,7 +22,7 @@ body {
   align-items: center;
   padding: 15px 30px;
   background-color: #000;
-  box-shadow: 0px 4px 10px rgba(235, 0, 0, 0.6);
+  box-shadow: 0 4px 10px rgba(235, 0, 0, 0.6);
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -58,65 +58,66 @@ body {
   color: white;
 }
 
-/* HERO SECTION */
+/* HERO */
 #hero {
+  position: relative;
+  height: 100vh;
+  background: url("./img/Hero.png") center/cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 140px 50px 50px;
-  gap: 40px;
-  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 0 30px;
 }
 
-.hero-content {
-  flex: 1;
-  min-width: 320px;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-.hero-content h2 {
-  font-size: 48px;
-  color: white;
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
 }
 
-.hero-content h1 {
+.hero-text h2 {
+  font-size: 40px;
+}
+
+.hero-text h1 {
   font-size: 70px;
   font-weight: 800;
 }
 
-.hero-content h1 span {
+.hero-text h1 span {
   color: red;
 }
 
-.hero-content p {
+.hero-text p,
+.hero-text li {
   font-size: 18px;
   margin-top: 10px;
+  list-style: none;
 }
 
-.hero-content ul {
+.hero-text ul {
   margin: 15px 0;
-  padding-left: 20px;
-}
-
-.hero-content li {
-  margin-bottom: 5px;
-  font-size: 16px;
+  padding: 0;
 }
 
 .highlight {
   color: red;
-  font-weight: 500;
-  margin-top: 10px;
-}
-
-.hero-img img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 10px;
+  font-weight: 600;
 }
 
 /* ABOUT */
 #about {
-  padding: 60px 30px;
+  padding: 80px 30px;
   text-align: center;
 }
 
@@ -130,12 +131,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .about-img img {
-  width: 250px;
+  width: 230px;
   border-radius: 50%;
   border: 3px solid red;
 }
@@ -148,7 +149,7 @@ body {
 
 /* SERVICES */
 #services {
-  padding: 60px 20px;
+  padding: 70px 30px;
   text-align: center;
 }
 
@@ -200,13 +201,59 @@ body {
 
 /* PRODUCTS */
 #products {
-  padding: 60px 30px;
+  padding: 80px 30px;
   text-align: center;
 }
 
-/* CONTACTS */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product-box {
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.product-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h4 {
+  color: red;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #c40000;
+}
+
+/* CONTACT */
 #contacts {
-  padding: 60px 20px;
+  padding: 80px 30px;
   text-align: center;
 }
 
@@ -278,17 +325,11 @@ footer {
     display: block;
   }
 
-  #hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 120px 20px 40px;
-  }
-
-  .hero-content h1 {
+  .hero-text h1 {
     font-size: 50px;
   }
 
-  .hero-content h2 {
+  .hero-text h2 {
     font-size: 36px;
   }
 
@@ -296,7 +337,8 @@ footer {
     flex-direction: column;
   }
 
-  .services-grid {
+  .services-grid,
+  .product-grid {
     grid-template-columns: 1fr;
   }
 }
